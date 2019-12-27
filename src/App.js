@@ -2,23 +2,24 @@ import React from "react";
 import {
   darkGray,
   orange,
-  yale,
+  // yale,
   slate,
   black,
-  periwinkle,
-  white,
-  lightblue,
-  lightGray,
-  blue
+  // periwinkle,
+  // white,
+  // lightblue,
+  lightGray
+  // blue
 } from "./Colors";
 import { Button } from "@material-ui/core/";
 
 import logo from "./assets/logo.png";
 import snackpass from "./assets/snackpass.png";
-import pcb from "./assets/pcb.png";
+// import pcb from "./assets/pcb.png";
 import resnet from "./assets/resnet.png";
-import regression from "./assets/regression.png";
+// import regression from "./assets/regression.png";
 import grapher from "./assets/grapher.png";
+import { isMobile } from "react-device-detect";
 
 function openInNewTab(url) {
   var win = window.open(url, "_blank");
@@ -132,8 +133,8 @@ const _about = () => {
         lives of others.
       </text>
       <text style={{ ...styles.normalText, marginTop: 10 }}>
-        In my free time I enjoy playing both tennis and chess, collecting coins,
-        and reading about American history.
+        In my free time I enjoy playing tennis and chess, collecting coins, and
+        reading about American history.
       </text>
       <text style={{ ...styles.normalText, marginTop: 10 }}>
         In Spring 2020 I will be a <text style={{ fontWeight: "500" }}>TA</text>{" "}
@@ -229,21 +230,23 @@ const _contact = () => {
           (832) 967-7670
         </text>
       </div>
-      <div
-        style={{
-          ...styles.subContainer,
-          flexDirection: "row",
-          justifyContent: "flex-end"
-        }}
-      >
-        {_getButton(
-          "https://www.linkedin.com/in/vikram-mullick-39978a159/",
-          125,
-          "LinkedIn"
-        )}
-        {_getButton("https://github.com/vikrammullick", 125, "GitHub")}
-        {_getButton("https://lichess.org/@/jpvalley", 125, "lichess")}
-      </div>
+      {isMobile ? null : (
+        <div
+          style={{
+            ...styles.subContainer,
+            flexDirection: "row",
+            justifyContent: "flex-end"
+          }}
+        >
+          {_getButton(
+            "https://www.linkedin.com/in/vikram-mullick-39978a159/",
+            125,
+            "LinkedIn"
+          )}
+          {_getButton("https://github.com/vikrammullick", 125, "GitHub")}
+          {_getButton("https://lichess.org/@/jpvalley", 125, "lichess")}
+        </div>
+      )}
     </div>
   );
 };
@@ -399,29 +402,29 @@ const _grapher = () => {
   );
 };
 
-const _regression = () => {
-  return (
-    <div style={{ ...styles.subContainer }}>
-      <text style={styles.normalText}></text>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "flex-end",
-          marginTop: 25,
-          marginBottom: 10
-        }}
-      >
-        {/* {_getButton(
-          "https://github.com/vikrammullick/Regression-Calc-v2",
-          120,
-          "GitHub"
-        )} */}
-        {_getButton("https://imgur.com/a/eT99Qlp", 200, "App Screenshots")}
-      </div>
-    </div>
-  );
-};
+// const _regression = () => {
+//   return (
+//     <div style={{ ...styles.subContainer }}>
+//       <text style={styles.normalText}></text>
+//       <div
+//         style={{
+//           display: "flex",
+//           flexDirection: "row",
+//           justifyContent: "flex-end",
+//           marginTop: 25,
+//           marginBottom: 10
+//         }}
+//       >
+//         {/* {_getButton(
+//           "https://github.com/vikrammullick/Regression-Calc-v2",
+//           120,
+//           "GitHub"
+//         )} */}
+//         {_getButton("https://imgur.com/a/eT99Qlp", 200, "App Screenshots")}
+//       </div>
+//     </div>
+//   );
+// };
 
 function App() {
   return (
