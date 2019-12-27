@@ -1,0 +1,25 @@
+// Color Pallete
+export const blue = "#3185fc";
+export const lightblue = "#85B0F4";
+export const orange = "#fb5012";
+export const green = "#59cd90";
+export const yellow = "#fac05e";
+export const white = "#ffffff";
+export const offwhite = "#f5f5f5";
+export const black = "#000000";
+export const gray = "#A9A9A9";
+export const darkGray = "#696969";
+export const mediumGray = "#DCDCDC";
+export const lightGray = "#EDEDED";
+export const superLightGray = "#F0F0F0";
+export const red = "#E24446";
+export const slate = "#778899";
+export const purple = "#9370DB";
+export const teal = "#6EC6BA";
+export const periwinkle = "#CCCCFF";
+export const darkgreen = "#006400";
+export const burntOrange = "#bf5700";
+export const tan = "#fdd9b5";
+export const lightOrange = "#FF9900";
+export const moneyGreen = "#009E60";
+export const yale = "#00356B";

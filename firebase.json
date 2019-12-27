@@ -1,0 +1,7 @@
+{
+  "hosting": {
+    "site": "vikrammullick",
+    "public": "build",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+  }
+}
