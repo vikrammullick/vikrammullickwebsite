@@ -221,14 +221,14 @@ const _contact = () => {
         >
           vikram.mullick@yale.edu
         </text>
-        <text
+        {/* <text
           style={{
             fontFamily: "Avenir Next",
             fontSize: 24
           }}
         >
           (832) 967-7670
-        </text>
+        </text> */}
       </div>
       {isMobile ? null : (
         <div
