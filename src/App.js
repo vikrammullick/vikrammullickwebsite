@@ -127,18 +127,24 @@ const _about = () => {
         (B.A.).
       </text>
       <text style={{ ...styles.normalText, marginTop: 10 }}>
-        Some topics within computer science that interest me are machine
-        learning, embedded systems, and algorithms, and I am passionate about
-        leveraging both engineering and design to create products to improve the
-        lives of others.
+        Some interests of mine include machine learning, fintech, startups,
+        cloud automation, embedded systems, and mobile development. I worked at
+        Snackpass, a startup backed by{" "}
+        <text style={{ fontWeight: "500" }}>YC</text> and{" "}
+        <text style={{ fontWeight: "500" }}>a16z</text>, as one of their first
+        full-time engineers from May to December 2018.
       </text>
       <text style={{ ...styles.normalText, marginTop: 10 }}>
-        In my free time I enjoy playing tennis and chess, collecting coins, and
-        reading about American history.
+        At Yale, I am part of an NLP lab researching converting natural language
+        to database queries.
       </text>
       <text style={{ ...styles.normalText, marginTop: 10 }}>
-        In Spring 2020 I will be a <text style={{ fontWeight: "500" }}>TA</text>{" "}
-        for CPSC 663: Deep Learning Theory & Applications.
+        In my free time I enjoy playing tennis and chess and reading about
+        American history.
+      </text>
+      <text style={{ ...styles.normalText, marginTop: 10 }}>
+        I am currently a <text style={{ fontWeight: "500" }}>TA</text> for CPSC
+        663: Deep Learning Theory & Applications during Spring 2020.
       </text>
     </div>
   );
@@ -209,7 +215,8 @@ const _contact = () => {
       style={{
         display: "flex",
         flexDirection: "row",
-        justifyContent: "space-between"
+        justifyContent: "space-between",
+        alignItems: "center"
       }}
     >
       <div style={styles.subContainer}>
@@ -299,10 +306,10 @@ const _snackpass = () => {
     <div style={{ ...styles.subContainer }}>
       <text style={styles.normalText}>
         During the Summer of 2018 I worked at Snackpass, a{" "}
-        <text style={{ color: orange, fontWeight: "500" }}>YC</text>-backed food
-        startup specializing in optimizing the restaurant take-out experience.
-        Following this, I took a semester off during Fall 2018 to work as lead
-        front end software engineer in Berkeley, CA.
+        <text style={{ color: orange, fontWeight: "500" }}>YC/a16z</text>-backed
+        food startup specializing in optimizing the restaurant take-out
+        experience. Following this, I took a semester off during Fall 2018 to
+        work as lead front end software engineer in Berkeley, CA.
       </text>
       <text style={{ ...styles.normalText, marginTop: 10 }}>
         At Snackpass I led development on a new app to allow restaurant owners
