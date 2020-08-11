@@ -116,7 +116,7 @@ const _about = () => {
   return (
     <div style={styles.subContainer}>
       <text style={styles.normalText}>
-        Hi! My name is Vikram, and I am a junior at{" "}
+        Hi! My name is Vikram, and I am a student at{" "}
         <text style={{ color: black, fontWeight: "500" }}>Yale University</text>{" "}
         majoring in{" "}
         <text style={{ color: orange, fontWeight: "500" }}>
@@ -127,29 +127,39 @@ const _about = () => {
         (B.A.).
       </text>
       <text style={{ ...styles.normalText, marginTop: 10 }}>
-        Some interests of mine include machine learning, fintech, startups,
-        cloud automation, embedded systems, and mobile development. I worked at
-        Snackpass, a startup backed by{" "}
-        <text style={{ fontWeight: "500" }}>YC</text> and{" "}
+        Some interests of mine include machine learning, embedded systems,
+        startups, fintech, and mobile development.
+      </text>
+      <text style={{ ...styles.normalText, marginTop: 10 }}>
+        This past summer I worked at{" "}
+        <text style={{ fontWeight: "500" }}>Pure Storage</text> as a software
+        engineering intern on the FlashBlade Object Store team.
+      </text>
+      <text style={{ ...styles.normalText, marginTop: 10 }}>
+        From May to December 2018 I worked at{" "}
+        <text style={{ fontWeight: "500" }}>Snackpass</text>, a startup backed
+        by <text style={{ fontWeight: "500" }}>YC</text> and{" "}
         <text style={{ fontWeight: "500" }}>a16z</text>, as one of their first
-        full-time engineers from May to December 2018.
+        full-time engineers.
       </text>
       <text style={{ ...styles.normalText, marginTop: 10 }}>
         At Yale, I am part of a Natural Language Processing lab researching
-        converting natural language to SQL database queries.
+        converting natural language to SQL database queries as well as managing
+        and managing and developing productization of the research for
+        commercial use in partnership with startups.
       </text>
-      {/* <text style={{ ...styles.normalText, marginTop: 10 }}>
-        Additionally, I am part of an operating systems lab exploring
-        implementing virtual memory addressing with Intel Optane non-volatile
-        memory.
-      </text> */}
+      <text style={{ ...styles.normalText, marginTop: 10 }}>
+        During Spring 2020 I served as lead{" "}
+        <text style={{ fontWeight: "500" }}>TA</text> for a graduate-level deep
+        learning course at Yale.
+      </text>
       <text style={{ ...styles.normalText, marginTop: 10 }}>
         In my free time I enjoy playing tennis and chess and reading about
         American history.
       </text>
       <text style={{ ...styles.normalText, marginTop: 10 }}>
-        I am currently a <text style={{ fontWeight: "500" }}>TA</text> for CPSC
-        663: Deep Learning Theory & Applications during Spring 2020.
+        This fall I will be joining{" "}
+        <text style={{ fontWeight: "500" }}>Matician</text> as an AI resident.
       </text>
     </div>
   );
@@ -164,13 +174,13 @@ const _languages = () => {
       <text style={{ ...styles.normalText }}>
         <text style={{ color: slate }}>C</text>,{"   "}
         <text style={{ color: slate }}>C++</text>,{"   "}
-        <text style={{ color: slate }}>JavaScript</text>,{"   "}
-        <text style={{ color: slate }}>Swift</text>,{"   "}
         <text style={{ color: slate }}>Python</text>,{"   "}
         <text style={{ color: slate }}>Java</text>,{"   "}
-        <text style={{ color: slate }}>Objective-C</text>,{"   "}
+        <text style={{ color: slate }}>JavaScript</text>,{"   "}
+        <text style={{ color: slate }}>Swift</text>,{"   "}
+        <text style={{ color: slate }}>SQL</text>,{"   "}
         <text style={{ color: slate }}>R</text>,{"   "}
-        <text style={{ color: slate }}>Assembly</text>
+        <text style={{ color: slate }}>Objective-C</text>
       </text>
     </div>
   );
@@ -179,31 +189,16 @@ const _frameworks = () => {
   return (
     <div style={{ ...styles.subContainer, marginBottom: 10 }}>
       <text style={{ ...styles.normalText }}>
-        <text style={{ fontWeight: "500" }}>Frameworks: </text>
+        <text style={{ fontWeight: "500" }}>Frameworks & Tools: </text>
       </text>
       <text style={{ ...styles.normalText }}>
-        <text style={{ color: slate }}>React.js</text>,{"   "}
-        <text style={{ color: slate }}>React Native</text>,{"   "}
-        <text style={{ color: slate }}>Redux.js</text>,{"   "}
-        <text style={{ color: slate }}>Node.js</text>,{"   "}
         <text style={{ color: slate }}>TensorFlow</text>,{"   "}
-        <text style={{ color: slate }}>PyTorch</text>
-      </text>
-    </div>
-  );
-};
-const _tools = () => {
-  return (
-    <div style={{ ...styles.subContainer }}>
-      <text style={{ ...styles.normalText }}>
-        <text style={{ fontWeight: "500" }}>Tools: </text>
-      </text>
-      <text style={{ ...styles.normalText }}>
-        <text style={{ color: slate }}>Git</text>,{"   "}
-        <text style={{ color: slate }}>Sketch</text>,{"   "}
-        <text style={{ color: slate }}>Firebase</text>,{"   "}
-        <text style={{ color: slate }}>Amazon Web Services</text>,{"   "}
-        <text style={{ color: slate }}>Xcode</text>,{"   "}
+        <text style={{ color: slate }}>PyTorch</text>,{"   "}
+        <text style={{ color: slate }}>CUDA</text>,{"   "}
+        <text style={{ color: slate }}>React</text>,{"   "}
+        <text style={{ color: slate }}>Express</text>,{"   "}
+        <text style={{ color: slate }}>Flask</text>,{"   "}
+        <text style={{ color: slate }}>Docker</text>,{"   "}
         <text style={{ color: slate }}>EAGLE</text>
       </text>
     </div>
@@ -256,7 +251,7 @@ const _contact = () => {
             "LinkedIn"
           )}
           {_getButton("https://github.com/vikrammullick", 125, "GitHub")}
-          {_getButton("https://lichess.org/@/jpvalley", 125, "lichess")}
+          {/* {_getButton("https://lichess.org/@/jpvalley", 125, "lichess")} */}
         </div>
       )}
     </div>
@@ -448,7 +443,6 @@ function App() {
         {_header("Skills")}
         {_languages()}
         {_frameworks()}
-        {_tools()}
         {_header("Experience & Projects")}
         {_projecHeader("Snackpass", snackpass, 0)}
         {_snackpass()}
