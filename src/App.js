@@ -8,7 +8,7 @@ import {
   // periwinkle,
   // white,
   // lightblue,
-  lightGray
+  lightGray,
   // blue
 } from "./Colors";
 import { Button } from "@material-ui/core/";
@@ -35,7 +35,7 @@ const _getButton = (url, width, label) => {
       style={{
         marginLeft: 10,
         width: width,
-        backgroundColor: lightGray
+        backgroundColor: lightGray,
       }}
     >
       <div
@@ -43,7 +43,7 @@ const _getButton = (url, width, label) => {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          width: width
+          width: width,
         }}
       >
         <text
@@ -53,7 +53,7 @@ const _getButton = (url, width, label) => {
             fontWeight: "500",
             fontStyle: "normal",
             color: black,
-            textTransform: "none"
+            textTransform: "none",
           }}
         >
           {label}
@@ -63,11 +63,11 @@ const _getButton = (url, width, label) => {
   );
 };
 
-const _header = headerTitle => {
+const _header = (headerTitle) => {
   return <h1 style={styles.header}>{headerTitle}</h1>;
 };
 
-const _name = name => {
+const _name = (name) => {
   return <text style={styles.name}>{name}</text>;
 };
 
@@ -79,14 +79,14 @@ const _projecHeader = (project, asset, radius) => {
         justifyContent: "space-between",
         alignItems: "center",
         marginTop: 20,
-        marginBottom: 20
+        marginBottom: 20,
       }}
     >
       <text
         style={{
           fontFamily: "Avenir Next",
           fontWeight: "500",
-          fontSize: 30
+          fontSize: 30,
         }}
       >
         {project}
@@ -96,7 +96,7 @@ const _projecHeader = (project, asset, radius) => {
           height: 50,
           width: 50,
           overflow: "hidden",
-          borderRadius: radius
+          borderRadius: radius,
         }}
       >
         <img
@@ -104,7 +104,7 @@ const _projecHeader = (project, asset, radius) => {
           alt={project}
           style={{
             height: 50,
-            width: 50
+            width: 50,
           }}
         />
       </div>
@@ -135,9 +135,14 @@ const _about = () => {
         full-time engineers from May to December 2018.
       </text>
       <text style={{ ...styles.normalText, marginTop: 10 }}>
-        At Yale, I am part of an NLP lab researching converting natural language
-        to database queries.
+        At Yale, I am part of a Natural Language Processing lab researching
+        converting natural language to SQL database queries.
       </text>
+      {/* <text style={{ ...styles.normalText, marginTop: 10 }}>
+        Additionally, I am part of an operating systems lab exploring
+        implementing virtual memory addressing with Intel Optane non-volatile
+        memory.
+      </text> */}
       <text style={{ ...styles.normalText, marginTop: 10 }}>
         In my free time I enjoy playing tennis and chess and reading about
         American history.
@@ -216,14 +221,14 @@ const _contact = () => {
         display: "flex",
         flexDirection: "row",
         justifyContent: "space-between",
-        alignItems: "center"
+        alignItems: "center",
       }}
     >
       <div style={styles.subContainer}>
         <text
           style={{
             fontFamily: "Avenir Next",
-            fontSize: 24
+            fontSize: 24,
           }}
         >
           vikram.mullick@yale.edu
@@ -242,7 +247,7 @@ const _contact = () => {
           style={{
             ...styles.subContainer,
             flexDirection: "row",
-            justifyContent: "flex-end"
+            justifyContent: "flex-end",
           }}
         >
           {_getButton(
@@ -291,7 +296,7 @@ const _blubag = () => {
           flexDirection: "row",
           justifyContent: "flex-end",
           marginTop: 25,
-          marginBottom: 10
+          marginBottom: 10,
         }}
       >
         {_getButton("http://blubag.co", 120, "Website")}
@@ -309,7 +314,7 @@ const _snackpass = () => {
         <text style={{ color: orange, fontWeight: "500" }}>YC/a16z</text>-backed
         food startup specializing in optimizing the restaurant take-out
         experience. Following this, I took a semester off during Fall 2018 to
-        work as lead front end software engineer in Berkeley, CA.
+        work as their first full-time software engineer in Berkeley, CA.
       </text>
       <text style={{ ...styles.normalText, marginTop: 10 }}>
         At Snackpass I led development on a new app to allow restaurant owners
@@ -329,7 +334,7 @@ const _snackpass = () => {
           flexDirection: "row",
           justifyContent: "flex-end",
           marginTop: 25,
-          marginBottom: 10
+          marginBottom: 10,
         }}
       >
         {_getButton("http://snackpass.co", 120, "Website")}
@@ -361,7 +366,7 @@ const _resnet = () => {
           flexDirection: "row",
           justifyContent: "flex-end",
           marginTop: 25,
-          marginBottom: 10
+          marginBottom: 10,
         }}
       >
         {_getButton(
@@ -395,7 +400,7 @@ const _grapher = () => {
           flexDirection: "row",
           justifyContent: "flex-end",
           marginTop: 25,
-          marginBottom: 10
+          marginBottom: 10,
         }}
       >
         {_getButton(
@@ -445,10 +450,10 @@ function App() {
         {_frameworks()}
         {_tools()}
         {_header("Experience & Projects")}
-        {_projecHeader("BluBag", logo, 0)}
-        {_blubag()}
         {_projecHeader("Snackpass", snackpass, 0)}
         {_snackpass()}
+        {_projecHeader("BluBag", logo, 0)}
+        {_blubag()}
         {_projecHeader("Resistor Net", resnet, 0)}
         {_resnet()}
         {_projecHeader("3D Grapher", grapher, 12.5)}
@@ -471,7 +476,7 @@ const styles = {
     paddingLeft: 30,
     paddingTop: 50,
     paddingBottom: 50,
-    margin: "auto"
+    margin: "auto",
   },
   subContainer: { display: "flex", flexDirection: "column" },
   header: {
@@ -479,25 +484,25 @@ const styles = {
     fontWeight: "400",
     fontSize: 35,
     marginTop: 50,
-    color: darkGray
+    color: darkGray,
   },
   name: {
     fontFamily: "Avenir Next",
     fontWeight: "500",
     fontSize: 50,
-    alignSelf: "center"
+    alignSelf: "center",
   },
   divider: {
     height: 1,
     width: "100%",
     background: "gray",
     marginTop: 25,
-    marginBottom: 25
+    marginBottom: 25,
   },
   normalText: {
     fontFamily: "Avenir Next",
     fontWeight: "400",
-    fontSize: 24
-  }
+    fontSize: 24,
+  },
 };
 export default App;
